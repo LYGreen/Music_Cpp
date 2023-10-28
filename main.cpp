@@ -125,7 +125,7 @@ void PianoKey(int kbKey, int tone)
     {
         if (keys[kbKey] == false)
         {
-            midiOutShortMsg(hMidiOut, 0x90 + ((tone + octave * 8) << 8) + (VOLUME << 16) + CHANNEL);
+            midiOutShortMsg(hMidiOut, 0x90 + ((tone + octave * 12) << 8) + (VOLUME << 16) + CHANNEL);
             keys[kbKey] = true;
         }
     }
